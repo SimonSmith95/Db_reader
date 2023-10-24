@@ -4,9 +4,9 @@ Base class for reading data from SQL database using python mysql.connector.
 ---------------------------------------------------------------------------------------------------------------------------
 Example usage for finding a suitable chunk size when importing the data (assuming 1 second response time is acceptable): 
 
-credentials = ['host', 'usr_name', 'password']  <br />
+credentials = ['host', 'usr_name', 'password'] <br />
 
-reader = DbReader(credentials, 'database_name') <br />
+reader = DbReader(credentials, 'database_name')<br />
 
 df = reader.fetch_data(table_name='my_table', column_names=cols, evaluate_chunk_size=True) <br />
 
