@@ -4,11 +4,11 @@ Base class for reading data from SQL database using python mysql.connector.
 ---------------------------------------------------------------------------------------------------------------------------
 Example usage for finding a suitable chunk size when importing the data (assuming 1 second response time is acceptable): 
 
-credentials = ['host', 'usr_name', 'password'] \n
+credentials = ['host', 'usr_name', 'password']  <br />
 
-reader = DbReader(credentials, 'database_name') \n
+reader = DbReader(credentials, 'database_name') <br />
 
-df = reader.fetch_data(table_name='my_table', column_names=cols, evaluate_chunk_size=True)
+df = reader.fetch_data(table_name='my_table', column_names=cols, evaluate_chunk_size=True) <br />
 
 The function reader.fetch_data() sends back the dataframe and prints the chunk size with the best performance
 during the evaluation.
@@ -18,11 +18,11 @@ during the evaluation.
 Example usage with specified chunk size to use and getting all columns in the table 
 (if no chunk size is sent it will use the chunk size 100).
 
-credentials = ['host', 'usr_name', 'password']
+credentials = ['host', 'usr_name', 'password'] <br />
 
-reader = DbReader(credentials, 'database_name')
+reader = DbReader(credentials, 'database_name') <br />
 
-df = reader.fetch_data(table_name='my_table', chunk_size=100)
+df = reader.fetch_data(table_name='my_table', chunk_size=100) <br />
 
 ---------------------------------------------------------------------------------------------------------------------------
 
