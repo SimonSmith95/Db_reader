@@ -7,6 +7,7 @@ Example usage for finding a suitable chunk size when importing the data (assumin
 credentials = ['host', 'usr_name', 'password']
 
 reader = DbReader(credentials, 'database_name')
+
 df = reader.fetch_data(table_name='my_table', column_names=cols, evaluate_chunk_size=True)
 
 The function reader.fetch_data() sends back the dataframe and prints the chunk size with the best performance
@@ -18,7 +19,9 @@ Example usage with specified chunk size to use and getting all columns in the ta
 (if no chunk size is sent it will use the chunk size 100).
 
 credentials = ['host', 'usr_name', 'password']
+
 reader = DbReader(credentials, 'database_name')
+
 df = reader.fetch_data(table_name='my_table', chunk_size=100)
 
 ---------------------------------------------------------------------------------------------------------------------------
