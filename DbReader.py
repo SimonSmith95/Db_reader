@@ -108,6 +108,8 @@ class DbReader:
                     pbar2.update(len(rows))
                 df = pd.DataFrame([row for chunk in chunks for row in chunk], columns=cursor.column_names)
                 pbar2.close()
+        cursor.close()
+        connection.close()
         return df
 
 
